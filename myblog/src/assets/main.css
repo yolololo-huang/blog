@@ -1,0 +1,69 @@
+/* @import './base.css'; */
+
+html, body {
+  height: 100vh; /* 设置高度为视口高度 */
+  margin: 0; /* 去除默认的外边距 */
+  overflow: auto; /* 默认显示滚动条 */
+}
+
+#app {
+  max-width: 1800px;
+  margin: 15px auto;
+  padding: 0rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(189, 0, 189);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(303, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  html, body {
+    overflow: hidden; /* 在宽度大于等于1024px时隐藏滚动条 */
+  }
+
+  body {
+    /* display: flex; */
+    place-items: center;
+  }
+
+  #app {
+    /* display: block; */
+    /* grid-template-columns: 1fr 1fr; */
+    padding: 0 2rem;
+  }
+}
+
+.el-header {
+  width: 100%;
+}
+
+.el-main {
+  width: 100%;
+}
+
+/* 新增的媒体查询，适应手机端 */
+@media (max-width: 800px) {
+  #app {
+    padding: 1rem; /* 减少内边距以适应较小屏幕 */
+  }
+  .left-column, .right-column {
+    width: 100%; /* 确保列宽度为100% */
+  }
+}
+
+@media (max-width: 320px) {
+  html, body {
+    min-width: 320px; /* 确保最小宽度不小于320px */
+  }
+}
